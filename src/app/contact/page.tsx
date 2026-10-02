@@ -3,12 +3,14 @@ import type { Metadata } from 'next';
 import Container from '@/components/ui/Container';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Card from '@/components/ui/Card';
+import ContactForm from '@/components/forms/ContactForm';
+import ProfileDownloadGate from '@/components/forms/ProfileDownloadGate';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
   title: 'Let’s Talk — ThinkingHead | Start a Discovery Conversation',
   description:
-    'Tell us the challenge. We’ll tell you what we’d do differently and what we’d do first.',
+    'Tell us the challenge. We’ll tell you what we’d do differently and what we’d do first. Discovery call intake and gated corporate profile request.',
 };
 
 export default function ContactPage() {
@@ -32,7 +34,10 @@ export default function ContactPage() {
       </section>
 
       {/* 3-STEP WALKTHROUGH */}
-      <section className={`${styles.section} ${styles.sectionContrast}`} aria-labelledby="conversation-heading">
+      <section
+        className={`${styles.section} ${styles.sectionContrast}`}
+        aria-labelledby="conversation-heading"
+      >
         <Container>
           <SectionHeading
             badge="Consultation Protocol"
@@ -66,76 +71,60 @@ export default function ContactPage() {
         </Container>
       </section>
 
-      {/* DIRECT CONTACT & FORM ARCHITECTURE STATUS */}
-      <section className={styles.section} aria-labelledby="contact-channels-title">
+      {/* INTERACTIVE FORM & DIRECT CHANNELS SECTION */}
+      <section className={styles.section} aria-labelledby="engagement-intake-title">
         <Container>
-          <div className={styles.contactGrid}>
-            {/* Direct Contact Information */}
-            <div className={styles.directBox}>
-              <h2 id="contact-channels-title" className={styles.directTitle}>
-                Direct Engagement Channels
-              </h2>
-
-              <div className={styles.directItem}>
-                <div className={styles.itemLabel}>Primary Email</div>
-                <div className={styles.itemValue}>
-                  <a href="mailto:hello@thinkinghead.ng" className={styles.itemLink}>
-                    hello@thinkinghead.ng
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.directItem}>
-                <div className={styles.itemLabel}>Operational Inquiries</div>
-                <div className={styles.itemValue}>
-                  <a href="mailto:thinkingheadng@gmail.com" className={styles.itemLink}>
-                    thinkingheadng@gmail.com
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.directItem}>
-                <div className={styles.itemLabel}>Direct Telephone</div>
-                <div className={styles.itemValue}>
-                  <a href="tel:+2347068349172" className={styles.itemLink}>
-                    +234 706 834 9172
-                  </a>
-                </div>
-              </div>
-
-              <div className={styles.directItem}>
-                <div className={styles.itemLabel}>Headquarters Address</div>
-                <div className={styles.itemValue}>
-                  5 Pipeline Road, Bayan Dutse, Kaduna, Nigeria
-                </div>
-              </div>
+          <div className={styles.contactMainGrid}>
+            {/* Left Column: Interactive Discovery Call Intake Form */}
+            <div>
+              <ContactForm />
             </div>
 
-            {/* Form Integration Status Notice */}
-            <div className={styles.pipelineNotice}>
-              <span className={styles.noticeBadge}>Integration Pipeline</span>
-              <h3 className={styles.noticeTitle}>
-                Discovery Form Endpoint
-              </h3>
-              <p className={styles.noticeBody}>
-                The interactive discovery form pipeline is architected for Route Handler processing
-                at <code>/api/contact</code> and <code>/api/download-profile</code>.
-              </p>
-              <p className={styles.noticeBody}>
-                Form fields defined in architecture schema:
-              </p>
-              <div className={styles.fieldsList}>
-                • Name<br />
-                • Organisation<br />
-                • Role / Title<br />
-                • Email Address<br />
-                • Phone Number<br />
-                • Challenge Description<br />
-                • Anti-Spam Honeypot Verification
+            {/* Right Column: Direct Channels & Gated Corporate Profile Gate */}
+            <div className={styles.sidebarColumn}>
+              {/* Direct Channels */}
+              <div className={styles.directBox}>
+                <h2 id="engagement-intake-title" className={styles.directTitle}>
+                  Direct Channels
+                </h2>
+
+                <div className={styles.directItem}>
+                  <div className={styles.itemLabel}>Primary Email</div>
+                  <div className={styles.itemValue}>
+                    <a href="mailto:hello@thinkinghead.ng" className={styles.itemLink}>
+                      hello@thinkinghead.ng
+                    </a>
+                  </div>
+                </div>
+
+                <div className={styles.directItem}>
+                  <div className={styles.itemLabel}>Operational Inquiries</div>
+                  <div className={styles.itemValue}>
+                    <a href="mailto:thinkingheadng@gmail.com" className={styles.itemLink}>
+                      thinkingheadng@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className={styles.directItem}>
+                  <div className={styles.itemLabel}>Direct Telephone</div>
+                  <div className={styles.itemValue}>
+                    <a href="tel:+2347068349172" className={styles.itemLink}>
+                      +234 706 834 9172
+                    </a>
+                  </div>
+                </div>
+
+                <div className={styles.directItem}>
+                  <div className={styles.itemLabel}>Headquarters Address</div>
+                  <div className={styles.itemValue}>
+                    5 Pipeline Road, Bayan Dutse, Kaduna, Nigeria
+                  </div>
+                </div>
               </div>
-              <p style={{ marginTop: 'var(--space-4)', fontSize: 'var(--text-xs)', color: 'var(--color-muted)' }}>
-                [Awaiting business approval of persistent lead storage destination and notification credentials before activating public form handlers.]
-              </p>
+
+              {/* Gated Corporate Profile Component */}
+              <ProfileDownloadGate />
             </div>
           </div>
         </Container>

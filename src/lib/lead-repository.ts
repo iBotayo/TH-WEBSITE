@@ -62,3 +62,7 @@ export class DevelopmentLoggingLeadRepository implements LeadRepository {
     };
   }
 }
+
+// Development default lead repository instance
+export const defaultLeadRepository = new DevelopmentLoggingLeadRepository();
+

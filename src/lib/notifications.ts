@@ -59,3 +59,8 @@ export class ConsoleEmailNotifier implements EmailNotifier {
     return { success: true };
   }
 }
+
+// Development default notifier instances
+export const defaultEmailNotifier = new ConsoleEmailNotifier();
+export const defaultWhatsAppNotifier = new ConsoleWhatsAppNotifier();
+

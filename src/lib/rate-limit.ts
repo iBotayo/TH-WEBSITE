@@ -54,3 +54,7 @@ export class MemoryRateLimiter implements RateLimiter {
     };
   }
 }
+
+// Development singleton rate limiter instance for process lifetime
+export const defaultRateLimiter = new MemoryRateLimiter(600000, 5);
+
