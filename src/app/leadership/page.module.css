@@ -1,0 +1,141 @@
+.pageHero {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  background-color: var(--color-bg-page);
+}
+
+@media (min-width: 768px) {
+  .pageHero {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+  }
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.heroLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+}
+
+.leadersGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .leadersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.leaderCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headshot Placeholder Slot */
+.headshotSlot {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: rgba(46, 107, 92, 0.05);
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.slotIcon {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.slotNotice {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.leaderName {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.leaderRole {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.leaderBio {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+.closingBox {
+  text-align: center;
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-16);
+}
+
+.closingQuote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}

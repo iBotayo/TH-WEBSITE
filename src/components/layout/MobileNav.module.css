@@ -1,0 +1,108 @@
+.menuToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  padding: 0;
+  gap: 5px;
+  z-index: 1001;
+}
+
+@media (min-width: 992px) {
+  .menuToggle {
+    display: none;
+  }
+}
+
+.menuToggle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.bar {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 1px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.isOpen .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.isOpen .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.isOpen .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Full-Screen Overlay (Strictly as specified in BRD A4) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-bg-page);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem var(--space-6) var(--space-8);
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.overlayOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.mobileNavLink {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid rgba(46, 107, 92, 0.1);
+  width: 100%;
+  transition: color var(--transition-fast);
+}
+
+.mobileNavLink:hover,
+.mobileNavLink:focus {
+  color: var(--color-accent);
+}
+
+.mobileCtaWrapper {
+  margin-top: var(--space-8);
+}
+
+.registrationMeta {
+  margin-top: auto;
+  padding-top: var(--space-8);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  line-height: var(--leading-normal);
+}

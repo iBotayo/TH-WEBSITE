@@ -1,0 +1,190 @@
+.pageHero {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  background-color: var(--color-bg-page);
+}
+
+@media (min-width: 768px) {
+  .pageHero {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+  }
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.heroLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+/* Quick Anchor Jump Navigation */
+.quickNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.jumpLink {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.jumpLink:hover {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border-color: var(--color-primary);
+}
+
+/* Pillars Stack */
+.pillarsStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+}
+
+.pillarSection {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  scroll-margin-top: 90px; /* Offset for sticky header */
+}
+
+@media (min-width: 768px) {
+  .pillarSection {
+    padding: var(--space-12);
+  }
+}
+
+.pillarHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.pillarNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.pillarName {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  line-height: var(--leading-snug);
+}
+
+.pillarContent {
+  margin-bottom: var(--space-6);
+}
+
+.pillarDescription {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* Explicit required content placeholder badge */
+.contentNotice {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  background-color: rgba(210, 171, 103, 0.1);
+  border: 1px dashed var(--color-accent);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.subServicesList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  padding-left: var(--space-4);
+}
+
+.subServiceItem {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.outcomeBox {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.outcomeText {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--color-accent);
+  line-height: var(--leading-normal);
+}
+
+/* End of Page CTA */
+.endCta {
+  background-color: var(--color-bg-page);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-16) 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.ctaLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}

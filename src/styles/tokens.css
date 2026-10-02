@@ -1,0 +1,65 @@
+:root {
+  /* Brand Palette (Strictly from BRD Section A5 / 5.2) */
+  --color-primary: #2E6B5C;       /* Dark Teal: Headings, nav, CTAs, logo */
+  --color-primary-dark: #214E43;  /* Teal Hover */
+  --color-accent: #D2AB67;        /* Gold: Taglines, secondary CTAs, outcome statements */
+  --color-accent-hover: #BF9956;  /* Gold Hover */
+  --color-bg-page: #F5EDDD;       /* Warm Cream: Body page background */
+  --color-text: #2D2D2D;          /* Deep Charcoal: Body text, never pure black */
+  --color-surface: #FFFFFF;       /* Pure White: Cards, modals, contrast blocks */
+  --color-border: #E2D7C3;        /* Subtle Sand: Card borders, dividers */
+  --color-muted: #6B6862;         /* Muted meta text / secondary info */
+  --color-error: #B9382B;         /* Accessible Error State */
+  --color-focus: #2E6B5C;         /* Accessible Focus Ring */
+
+  /* Typography Families (Set via next/font CSS variables with fallbacks) */
+  --font-serif: var(--font-playfair, Georgia, 'Times New Roman', serif);
+  --font-sans: var(--font-inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  --font-mono: var(--font-jetbrains, 'JetBrains Mono', 'IBM Plex Mono', Menlo, monospace);
+
+  /* Fluid Typography Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);      /* 12-13px */
+  --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 0.9375rem);   /* 14-15px */
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);       /* 16-17px */
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);      /* 18-20px */
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);         /* 20-24px */
+  --text-2xl: clamp(1.625rem, 1.45rem + 0.85vw, 2rem);        /* 26-32px */
+  --text-3xl: clamp(2rem, 1.75rem + 1.25vw, 2.625rem);        /* 32-42px */
+  --text-4xl: clamp(2.5rem, 2.1rem + 2vw, 3.5rem);            /* 40-56px (Hero) */
+
+  /* Line Heights */
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  /* Spacing Scale (8pt Grid System) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+
+  /* Layout Containers */
+  --container-max: 1200px;
+  --container-narrow: 680px; /* Reading layout for insights */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows (Subtle, restraint-focused) */
+  --shadow-sm: 0 1px 2px rgba(45, 45, 45, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(45, 45, 45, 0.08), 0 2px 4px -1px rgba(45, 45, 45, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(45, 45, 45, 0.08), 0 4px 6px -2px rgba(45, 45, 45, 0.03);
+
+  /* Transitions (Strict 200ms ease-out) */
+  --transition-fast: 150ms ease-out;
+  --transition-normal: 200ms ease-out;
+}

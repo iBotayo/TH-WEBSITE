@@ -1,0 +1,67 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Primary Button: Teal fill, Gold text (Strictly as specified in BRD A4/A5) */
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+}
+
+.primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #E5C384;
+}
+
+/* Secondary Button: Subtle Outline on Cream */
+.secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+}
+
+.secondary:hover {
+  background-color: rgba(46, 107, 92, 0.08);
+  color: var(--color-primary-dark);
+}
+
+/* Text Link CTA (e.g. 'See how we work →') */
+.textLink {
+  background: transparent;
+  color: var(--color-primary);
+  border: none;
+  padding: 0;
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.textLink:hover {
+  color: var(--color-accent);
+}
+
+/* Full Width Utility */
+.fullWidth {
+  width: 100%;
+}

@@ -1,0 +1,332 @@
+/* Homepage CSS Module */
+.hero {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+  background-color: var(--color-bg-page);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.heroBadge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+.heroLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 740px;
+}
+
+.heroCtas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+  .heroCtas {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+  }
+}
+
+/* Common Section Spacing */
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.sectionContrast {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The Standard (3-Column Cards) */
+.standardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .standardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.standardCardTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.standardCardText {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+/* What We Do (2x4 Grid) */
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pillarCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.pillarNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.pillarName {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-snug);
+}
+
+.pillarOutcome {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: var(--leading-normal);
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.pillarLink {
+  margin-top: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.pillarLink:hover {
+  color: var(--color-accent);
+}
+
+/* How We Work Pipeline */
+.pipelineVisual {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .pipelineVisual {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pipelineVisual {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.pipelineStep {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  text-align: center;
+  position: relative;
+}
+
+.pipelineStepNumber {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.pipelineStepName {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Featured Work (3 Cards) */
+.workGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .workGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.projectTag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.projectName {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.projectDesc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+
+/* Industries Clusters */
+.industryClusterGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .industryClusterGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.clusterTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectorList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.sectorItem {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+/* Closing CTA Banner */
+.closingBanner {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10) var(--space-6);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .closingBanner {
+    padding: var(--space-16) var(--space-12);
+  }
+}
+
+.closingTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.closingLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}

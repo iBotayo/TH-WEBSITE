@@ -1,0 +1,75 @@
+.pageHero {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  background-color: var(--color-bg-page);
+}
+
+@media (min-width: 768px) {
+  .pageHero {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+  }
+}
+
+.heroContent {
+  max-width: 860px;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+.heroLead {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+.methodSection {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.closingCta {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  text-align: center;
+  background-color: var(--color-bg-page);
+}
+
+.closingTagline {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.closingTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
