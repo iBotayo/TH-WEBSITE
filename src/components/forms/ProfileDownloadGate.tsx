@@ -1,9 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Button from '@/components/ui/Button';
-import ProfileModal from './ProfileModal';
 import styles from './ProfileDownloadGate.module.css';
+
+const ProfileModal = dynamic(() => import('./ProfileModal'), { ssr: false });
+
+
 
 export default function ProfileDownloadGate() {
   const [isModalOpen, setIsModalOpen] = useState(false);
