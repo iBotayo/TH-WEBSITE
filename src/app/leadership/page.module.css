@@ -87,11 +87,22 @@
   margin-bottom: var(--space-6);
 }
 
-.slotIcon {
-  font-family: var(--font-mono);
+.monogramBadge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
   font-size: var(--text-2xl);
-  color: var(--color-primary);
-  margin-bottom: var(--space-2);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
 }
 
 .slotNotice {

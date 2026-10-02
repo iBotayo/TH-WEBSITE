@@ -38,10 +38,10 @@ export default function LeadershipPage() {
             {leadershipData.map((leader) => (
               <article key={leader.id} className={styles.leaderCard}>
                 {/* Clearly marked headshot asset placeholder */}
-                <div className={styles.headshotSlot} aria-label={`Headshot slot for ${leader.name}`}>
-                  <span className={styles.slotIcon} aria-hidden="true">
-                    👤
-                  </span>
+                <div className={styles.headshotSlot} aria-label={`Headshot placeholder for ${leader.name}`}>
+                  <div className={styles.monogramBadge} aria-hidden="true">
+                    {leader.initials}
+                  </div>
                   <span className={styles.slotNotice}>
                     {leader.headshotAsset}
                   </span>

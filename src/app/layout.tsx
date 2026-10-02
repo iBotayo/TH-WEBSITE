@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { organizationJsonLd } from "@/lib/seo";
 import "@/styles/globals.css";
 
 const playfair = Playfair_Display({
@@ -33,6 +34,26 @@ export const metadata: Metadata = {
   authors: [{ name: "ThinkingHead Nigeria Limited" }],
   creator: "ThinkingHead Nigeria Limited",
   publisher: "ThinkingHead Nigeria Limited",
+  openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "https://thinkinghead.ng",
+    siteName: "ThinkingHead Nigeria Limited",
+    title: "ThinkingHead — AI-Powered Research, Strategy & Engineering | Nigeria",
+    description:
+      "We turn complex challenges into working systems. AI-powered research, strategy and digital transformation from Kaduna, Nigeria.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -56,6 +77,12 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
         <a href="#main-content" className="skip-to-content">
           Skip to main content
@@ -69,3 +96,4 @@ export default function RootLayout({
     </html>
   );
 }
+
